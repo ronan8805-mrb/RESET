@@ -6,73 +6,70 @@
     <title>Prices & Deals | Reset Property Services</title>
     <meta name="description" content="Transparent pricing for professional cleaning, turnaround services, and car wash in Orihuela Costa, Spain.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">
                 <img src="logo.png" alt="Reset Property Services Logo" class="logo-img">
             </a>
-            
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="index.html#services">Services</a>
-                <a href="prices.html" class="active">Pricing & Deals</a>
+                <a href="index.html#areas">Areas</a>
+                <a href="prices.html" class="active">Pricing</a>
+                <a href="index.html#contact">Contact</a>
             </div>
-            
             <div class="nav-contact">
-                <a href="https://wa.me/34603350830" class="btn btn-outline" target="_blank">
-                    <i class="fab fa-whatsapp"></i> +34 603 35 08 30
-                </a>
-                <a href="index.html#quote" class="btn btn-primary">Free Quote</a>
+                <a href="https://wa.me/34603350830" class="btn btn-whatsapp btn-sm" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="index.html#contact" class="btn btn-primary btn-sm">Free Quote</a>
             </div>
-
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-toggle" id="mobileToggle">
-                <i class="fas fa-bars"></i>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">
+                <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button>
+        <button class="mobile-close" id="mobileClose" aria-label="Close menu"><i class="fas fa-times"></i></button>
+        <div class="mobile-brand"><img src="logo.png" alt="Reset Property Services" class="mobile-logo"></div>
         <div class="mobile-links">
             <a href="index.html">Home</a>
             <a href="index.html#services">Services</a>
+            <a href="index.html#areas">Areas We Cover</a>
             <a href="prices.html" class="active">Pricing & Deals</a>
-            <a href="https://wa.me/34603350830" class="mobile-contact"><i class="fab fa-whatsapp"></i> +34 603 35 08 30</a>
-            <a href="index.html#quote" class="btn btn-primary">Get a Free Quote</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="mobile-bottom">
+            <a href="https://wa.me/34603350830" class="btn btn-whatsapp full-width" target="_blank"><i class="fab fa-whatsapp"></i> +34 603 35 08 30</a>
+            <a href="mailto:Jamiehicks180@yahoo.com" class="btn btn-outline full-width"><i class="fas fa-envelope"></i> Email Us</a>
         </div>
     </div>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
 
-    <!-- Page Header -->
     <header class="page-header">
         <div class="container">
+            <span class="section-tag">Our Rates</span>
             <h1>Transparent Pricing. <span class="text-red">Premium Service.</span></h1>
-            <p>Competitive rates for Orihuela Costa, La Zenia, Punta Prima, Playa Flamenca, Los Dolses, and Cabo Roig.</p>
+            <p>Competitive rates across La Zenia, Punta Prima, Playa Flamenca, Los Dolses, Cabo Roig and all Orihuela Costa.</p>
         </div>
     </header>
 
-    <!-- Pricing Section -->
     <section class="pricing-section">
         <div class="container">
-            
+
             <div class="deals-banner">
                 <div class="deal-icon"><i class="fas fa-tag"></i></div>
                 <div class="deal-content">
-                    <h3>Current Deal: The Reset Package</h3>
+                    <h3><i class="fas fa-fire"></i> Current Deal: The Reset Package</h3>
                     <p>Book 4 consecutive changeover cleans and get the 5th for <strong>50% OFF!</strong></p>
                 </div>
             </div>
 
             <div class="pricing-grid">
-                
-                <!-- General Cleaning -->
                 <div class="price-card">
                     <div class="card-header">
                         <h3>General / Hourly Cleaning</h3>
@@ -90,8 +87,7 @@
                     <a href="https://wa.me/34603350830" class="btn btn-outline full-width">Book Hourly Clean</a>
                 </div>
 
-                <!-- Holiday Let Changeovers -->
-                <div class="price-card popular">
+                <div class="price-card popular" style="position:relative">
                     <div class="popular-badge">Most Requested</div>
                     <div class="card-header">
                         <h3>Holiday Let Changeovers</h3>
@@ -101,8 +97,10 @@
                         <span class="from">From</span><span class="currency">€</span><span class="amount">55</span>
                     </div>
                     <ul class="price-features">
-                        <li><i class="fas fa-check"></i> <strong>1 Bed:</strong> €55 | <strong>2 Bed:</strong> €70</li>
-                        <li><i class="fas fa-check"></i> <strong>3 Bed:</strong> €85 | <strong>4+ Bed:</strong> €100+</li>
+                        <li><i class="fas fa-check"></i> <strong>1 Bed:</strong> €55</li>
+                        <li><i class="fas fa-check"></i> <strong>2 Bed:</strong> €70</li>
+                        <li><i class="fas fa-check"></i> <strong>3 Bed:</strong> €85</li>
+                        <li><i class="fas fa-check"></i> <strong>4+ Bed:</strong> €100+</li>
                         <li><i class="fas fa-check"></i> Full property reset & presentation</li>
                         <li><i class="fas fa-check"></i> Linen/Laundry management (extra)</li>
                         <li><i class="fas fa-check"></i> Welcome pack setup available</li>
@@ -110,7 +108,6 @@
                     <a href="https://wa.me/34603350830" class="btn btn-primary full-width">Get Exact Quote</a>
                 </div>
 
-                <!-- Deep Cleaning -->
                 <div class="price-card">
                     <div class="card-header">
                         <h3>Deep / Builder Cleans</h3>
@@ -127,19 +124,17 @@
                     </ul>
                     <a href="https://wa.me/34603350830" class="btn btn-outline full-width">Request Assessment</a>
                 </div>
-
             </div>
-            
-            <!-- Extras Section -->
+
             <div class="extras-section">
                 <div class="section-header text-center">
+                    <span class="section-tag">Add-Ons</span>
                     <h2>Additional Services & Extras</h2>
                     <p>We do more than just house cleaning to ensure your property is perfectly reset.</p>
                 </div>
-                
                 <div class="extras-grid">
                     <div class="extra-card">
-                        <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?q=80&w=2000&auto=format&fit=crop" alt="Car Wash Service">
+                        <div class="icon-placeholder" style="background:linear-gradient(135deg,#111827,#1a2235)"><i class="fas fa-car-side" style="color:var(--red)"></i></div>
                         <div class="extra-info">
                             <h4>Professional Car Wash</h4>
                             <p>Get your vehicle looking pristine right on your driveway.</p>
@@ -150,7 +145,7 @@
                         </div>
                     </div>
                     <div class="extra-card">
-                        <div class="icon-placeholder"><i class="fas fa-tshirt"></i></div>
+                        <div class="icon-placeholder" style="background:linear-gradient(135deg,#111827,#1a2235)"><i class="fas fa-shirt" style="color:var(--red)"></i></div>
                         <div class="extra-info">
                             <h4>Laundry & Linen Service</h4>
                             <p>Washing, drying, and ironing of bedding and towels for holiday lets.</p>
@@ -160,7 +155,7 @@
                         </div>
                     </div>
                     <div class="extra-card">
-                        <div class="icon-placeholder"><i class="fas fa-hammer"></i></div>
+                        <div class="icon-placeholder" style="background:linear-gradient(135deg,#111827,#1a2235)"><i class="fas fa-hammer" style="color:var(--red)"></i></div>
                         <div class="extra-info">
                             <h4>General Maintenance</h4>
                             <p>Handyman services, rip-outs, and minor repairs.</p>
@@ -175,28 +170,46 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-brand">
                 <img src="logo.png" alt="Reset Property Services" class="footer-logo">
-                <p>Clean • Clear • Prepare</p>
-                <p class="footer-desc">Serving Orihuela Costa, La Zenia, Punta Prima, Playa Flamenca, Los Dolses, Cabo Roig and surrounding areas.</p>
+                <p class="footer-tagline">Clean • Clear • Prepare</p>
+                <p class="footer-desc">Professional property cleaning, clearance & turnaround services across Orihuela Costa and surrounding areas.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/share/1JRGWXxmpa/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/34603350830" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:Jamiehicks180@yahoo.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
-            <div class="footer-links">
+            <div class="footer-col">
                 <h4>Quick Links</h4>
                 <a href="index.html">Home</a>
                 <a href="index.html#services">Services</a>
                 <a href="prices.html">Prices & Deals</a>
+                <a href="index.html#areas">Areas We Cover</a>
+                <a href="index.html#contact">Contact Us</a>
             </div>
-            <div class="footer-contact">
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <a href="prices.html">Deep Cleaning</a>
+                <a href="prices.html">Holiday Changeovers</a>
+                <a href="prices.html">End of Tenancy</a>
+                <a href="prices.html">Post-Construction</a>
+                <a href="prices.html">Car Wash</a>
+            </div>
+            <div class="footer-col">
                 <h4>Contact Us</h4>
-                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/34603350830">+34 603 35 08 30</a></p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:Jamiehicks180@yahoo.com">Jamiehicks180@yahoo.com</a></p>
+                <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/34603350830">+34 603 35 08 30</a></div>
+                <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:Jamiehicks180@yahoo.com">Jamiehicks180@yahoo.com</a></div>
+                <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>La Zenia, Orihuela Costa</span></div>
             </div>
         </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 Reset Property Services. All rights reserved.</p>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 Reset Property Services. All rights reserved.</p>
+                <p>Designed for the Costa Blanca South.</p>
+            </div>
         </div>
     </footer>
 
